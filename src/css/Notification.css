@@ -1,0 +1,21 @@
+.notification {
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    width: 250px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Background color for different types of notifications */
+.notification.info {
+    background-color: #4caf50; /* Green for informational messages */
+}
+
+.notification.error {
+    background-color: #f44336; /* Red for error messages */
+}
