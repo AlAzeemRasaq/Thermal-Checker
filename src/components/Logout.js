@@ -3,7 +3,6 @@ import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 import LinkInClass from "../components/LinkInClass";
-import { SERVER_HOST } from "../config/global_constants";
 
 export default class Logout extends Component {
   constructor(props) {
