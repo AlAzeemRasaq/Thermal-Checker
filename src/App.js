@@ -3,9 +3,12 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Logout from './components/Logout';
 import Register from './components/Register';
-import Notification from './components/TemperatureAlert';
+import RoomFunctionality from './components/RoomFunctionality';
+import TemperatureAlert from './components/TemperatureAlert';
+import Notification from './components/TemperatureAlert'; // Correct component import
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 function App() {
   const [showNotification, setShowNotification] = useState(false);
 
@@ -20,13 +23,14 @@ function App() {
   return (
     <>
       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Login" element={<Login />} />
-        <Route path="/Logout" element={<Logout />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/TemperatureAlert" element={<TemperatureAlert />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/Logout" element={<Logout />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/RoomFunctionality" element={<RoomFunctionality />} />
+          <Route path="/TemperatureAlert" element={<TemperatureAlert />} />
+        </Routes>
       </BrowserRouter>
       
       <div style={{ padding: '2em' }}>
