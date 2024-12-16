@@ -1,0 +1,100 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Room Card Styles */
+.room-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px auto;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.room-card h3 {
+    color: #6a0dad;
+    /* Purple */
+    margin-bottom: 10px;
+}
+
+.room-card p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Button Styles */
+button {
+    background-color: #6a0dad;
+    /* Purple */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #540c9e;
+    /* Slightly darker purple */
+}
+
+/* Add Room Form Styles */
+input,
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #6a0dad;
+    /* Purple */
+    box-shadow: 0 0 5px rgba(106, 13, 173, 0.5);
+    /* Purple glow */
+}
+
+.error {
+    color: #d9534f;
+    /* Red for errors */
+    font-size: 12px;
+    margin-top: -5px;
+}
+
+/* EditableTemperature Component */
+.editable-temperature span {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.editable-temperature input {
+    width: 60px;
+    text-align: center;
+}
+
+.editable-temperature button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+/* Form Toggle */
+div>button:first-child {
+    display: block;
+    margin: 20px auto;
+}
