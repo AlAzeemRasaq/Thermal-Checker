@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom"; // replaces Redirect
 import axios from "axios";
 
 import LinkInClass from "../components/LinkInClass";
@@ -13,31 +13,33 @@ export default class Logout extends Component {
     };
   }
 
-  // Handles the logout process when the user submits the logout request
+  // Handles the logout process
   handleSubmit = (e) => {
     e.preventDefault(); // Prevents the default form submission behavior
 
     axios // Sends a POST request to the logout endpoint
-      .post(`${SERVER_HOST}/users/logout`)
       .then((res) => { // If the request is successful, log the user out
         console.log("User logged out");
         localStorage.clear();
         this.setState({ isLoggedIn: false });
       })
       .catch((err) => {
-        // do nothing
+        console.error("Logout error:", err);
       });
   };
 
   render() {
+    if (!this.state.isLoggedIn) {
+      return <Navigate to="/Home" />;
+    }
+
     return (
       <div>
-        {!this.state.isLoggedIn ? <Redirect to="/AllProducts" /> : null}
-        <div className="ar_logoutText">
-          <i className="fa  fa-sign-out" />
+        <div className="logout-text">
+          <i className="fa fa-sign-out" />
           <LinkInClass
             value="Log out"
-            className="ar_logoutButton"
+            className="logout-button"
             onClick={this.handleSubmit}
           />
         </div>
