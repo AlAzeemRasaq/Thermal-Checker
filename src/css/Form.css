@@ -1,0 +1,131 @@
+/* For Login.js and Register.js */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fc;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Header styling */
+.login-h2,
+.register-h2 {
+    text-align: center;
+    color: #6a0dad;
+    /* Purple color */
+    margin-bottom: 1rem;
+}
+
+.login-h4,
+.register-h4 {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.create-account-autton,
+.create-account-button {
+    color: #6a0dad;
+    /* Purple color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.create-account-button:hover {
+    text-decoration: underline;
+}
+
+/* Input styling */
+.login-input,
+.register-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="file"] {
+    margin-bottom: 1rem;
+}
+
+/* Button styling */
+.form-login-button,
+.form-register-button {
+    display: inline-block;
+    width: 48%;
+    padding: 0.75rem;
+    background-color: #6a0dad;
+    /* Purple color */
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-login-button:hover,
+.form-register-button:hover {
+    background-color: #580aab;
+    /* Darker purple */
+}
+
+.form-cancel-button,
+.form-register-cancel {
+    display: inline-block;
+    width: 48%;
+    padding: 0.75rem;
+    background-color: #ccc;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-cancel-button:hover,
+.form-register-cancel:hover {
+    background-color: #999;
+}
+
+/* Error message styling */
+.error {
+    background-color: #ffcccc;
+    color: #cc0000;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #cc0000;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .form-container,
+    .form-Container {
+        padding: 1.5rem;
+        width: 90%;
+    }
+}
